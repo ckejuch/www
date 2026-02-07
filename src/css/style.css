@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap") layer(base);
+/* UPDATED: Changed font import to Noto Sans (Light, Regular, Bold)  */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap") layer(base);
 
 @import "tailwindcss";
 
@@ -6,20 +7,33 @@
 
 @theme {
   --font-*: initial;
-  --font-inter: Inter, sans-serif;
+  /* UPDATED: Set Noto Sans as the primary font */
+  --font-noto: "Noto Sans", sans-serif;
 
   --color-*: initial;
   --color-current: currentColor;
   --color-transparent: transparent;
   --color-white: #ffffff;
-  --color-black: #181c31;
-  --color-primary: #7083f5;
-  --color-secondary: ;
-  --color-stroke: #ebeff4;
-  --color-dark: #1f233a;
-  --color-body: #79808a;
-  --color-gray: #f8f9ff;
-  --color-stroke-dark: #34374a;
+  
+  /* UPDATED: Black set to #000000  */
+  --color-black: #000000;
+  
+  /* UPDATED: Primary Purple set to #7F3F98  */
+  --color-primary: #7F3F98;
+  
+  /* NEW: Brand Tints calculated from Logobook percentages [cite: 21, 23, 25] */
+  --color-primary-50: #bf9fcb; /* 50% tint of Primary */
+  --color-primary-20: #e5d8ea; /* 20% tint of Primary */
+  --color-primary-7:  #f6f0f8; /* 7% tint of Primary */
+
+  --color-secondary: var(--color-primary-50);
+  
+  /* UPDATED: Mapped UI colors to Brand Grayscale Tints */
+  --color-stroke: #ededed;      /* 7% Black tint [cite: 21] */
+  --color-stroke-dark: #808080; /* 50% Black tint [cite: 25] */
+  --color-body: #808080;        /* 50% Black tint (Common for body text) */
+  --color-dark: #333333;        /* Dark gray fallback */
+  --color-gray: #f6f0f8;        /* Using 7% Purple tint for subtle backgrounds */
 
   --breakpoint-*: initial;
   --breakpoint-sm: 575px;
@@ -30,17 +44,18 @@
   --breakpoint-xs: 450px;
   --breakpoint-3xl: 1500px;
 
-  --background-image-gradient-1: linear-gradient(55.15deg, #8ea5fe -7.09%, #beb3fd 51.72%, #90d1ff 101.48%);
+  /* UPDATED: adjusted gradients to use the new primary purple */
+  --background-image-gradient-1: linear-gradient(55.15deg, #bf9fcb -7.09%, #e5d8ea 51.72%, #7F3F98 101.48%);
   --background-image-gradient-2: linear-gradient(120.12deg, #ff8fe8 0%, #ffc960 100%);
   --background-image-gradient-3: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 100%);
   --background-image-texture: url("../images/graphics/texture.svg");
 
-  --shadow-card: 0px 1px 5px rgba(45, 74, 170, 0.14);
-  --shadow-card-dark: 0px 1px 5px rgba(16, 25, 55, 0.14);
-  --shadow-input: 0px 10px 30px rgba(74, 108, 247, 0.08);
+  --shadow-card: 0px 1px 5px rgba(127, 63, 152, 0.14);
+  --shadow-card-dark: 0px 1px 5px rgba(0, 0, 0, 0.14);
+  --shadow-input: 0px 10px 30px rgba(127, 63, 152, 0.08);
 
-  --drop-shadow-card: 0px 1px 5px rgba(45, 74, 170, 0.14);
-  --drop-shadow-card-dark: 0px 1px 5px rgba(16, 25, 55, 0.14);
+  --drop-shadow-card: 0px 1px 5px rgba(127, 63, 152, 0.14);
+  --drop-shadow-card-dark: 0px 1px 5px rgba(0, 0, 0, 0.14);
 }
 
 @utility container {
@@ -52,9 +67,6 @@
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
   looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
 */
 @layer base {
   *,
@@ -215,6 +227,7 @@
 
 @layer base {
   body {
-    @apply font-inter;
+    /* UPDATED: Applied new Noto Sans font */
+    @apply font-noto;
   }
 }

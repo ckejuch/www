@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akademia Inicjatyw Twórczych</title>
+  </head>
+  <body class="bg-white dark:bg-black">
+    <!-- ======= Header Start ======= -->
+    <header class="absolute top-0 left-0 z-50 w-full duration-300 bg-white navbar border-stroke dark:border-stroke-dark dark:bg-black">
+      <div class="container relative max-w-[1400px]">
+        <div class="flex items-center justify-between">
+          <div class="block py-4 lg:py-0">
+            <a href="index.html" class="block max-w-[145px] sm:max-w-[180px]">
+              <img src="images/logo/ait_logo_weboffice_A_1.png" alt="logo" class="block dark:hidden" />
+              <img src="images/logo/logo-white.svg" alt="logo" class="hidden dark:block" />
+            </a>
+          </div>
+          <button
+            class="navbarOpen absolute right-4 top-1/2 z-50 flex h-10 w-10 -translate-y-1/2 flex-col items-center justify-center space-y-[6px] font-bold lg:hidden"
+            aria-label="navbarOpen"
+            name="navbarOpen"
+          >
+            <span class="block h-[2px] w-7 bg-black dark:bg-white"></span>
+            <span class="block h-[2px] w-7 bg-black dark:bg-white"></span>
+            <span class="block h-[2px] w-7 bg-black dark:bg-white"></span>
+          </button>
+
+          <div class="relative justify-between hidden menu-wrapper lg:flex">
+            <button class="fixed flex flex-col items-center justify-center w-10 h-10 font-bold navbarClose top-10 right-10 z-9999 lg:hidden" name="navbarClose" aria-label="navbarClose">
+              <span class="block h-[2px] w-7 rotate-45 bg-black dark:bg-white"></span>
+              <span class="-mt-[2px] block h-[2px] w-7 -rotate-45 bg-black dark:bg-white"></span>
+            </button>
+
+            <nav
+              class="fixed top-0 left-0 flex items-center justify-center w-full h-screen text-center z-999 bg-white/95 backdrop-blur-xs dark:bg-black/95 lg:static lg:h-auto lg:w-max lg:bg-transparent lg:backdrop-blur-none lg:dark:bg-transparent"
+            >
+              <ul class="items-center space-y-3 lg:flex lg:space-x-8 lg:space-y-0 xl:space-x-10">
+                <li class="menu-item">
+                  <a href="index.html" class="inline-flex items-center text-base font-medium text-black menu-scroll hover:text-primary dark:text-white dark:hover:text-primary lg:py-7"> Główna </a>
+                </li>
+                <li class="menu-item">
+                  <a href="index.html#features" class="inline-flex items-center text-base font-medium text-black menu-scroll hover:text-primary dark:text-white dark:hover:text-primary lg:py-7"> Cele </a>
+                </li>
+                <li class="menu-item">
+                  <a href="index.html#about" class="inline-flex items-center text-base font-medium text-black menu-scroll hover:text-primary dark:text-white dark:hover:text-primary lg:py-7"> O nas </a>
+                </li>
+                <!-- <li class="menu-item">
+                  <a href="#work-process" class="inline-flex items-center text-base font-medium text-black menu-scroll hover:text-primary dark:text-white dark:hover:text-primary lg:py-7">
+                    How It Works
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#support" class="inline-flex items-center text-base font-medium text-black menu-scroll hover:text-primary dark:text-white dark:hover:text-primary lg:py-7"> Support </a>
+                </li> -->
+                <li class="menu-item">
+                  <a href="blog-grid.html" class="inline-flex items-center text-base font-medium text-black menu-scroll hover:text-primary dark:text-white dark:hover:text-primary lg:py-7"> Projekty </a>
+                </li>
+                <!-- <li class="relative submenu-item menu-item group">
+                  <a
+                    href="javascript:void(0)"
+                    class="inline-flex items-center text-base font-medium text-black submenu-taggler hover:text-primary group-hover:text-primary dark:text-white dark:hover:text-primary lg:py-7"
+                  >
+                    Pages
+
+                    <span class="pl-3">
+                      <svg width="14" height="8" viewBox="0 0 14 8" class="fill-current">
+                        <path d="M6.54564 5.09128L11.6369 0L13.0913 1.45436L6.54564 8L0 1.45436L1.45436 0L6.54564 5.09128Z" />
+                      </svg>
+                    </span>
+                  </a>
+
+                  <ul
+                    class="submenu hidden space-y-5 pt-5 duration-300 lg:invisible lg:absolute lg:top-[120%] lg:block lg:w-[250px] lg:rounded-lg lg:bg-white lg:px-8 lg:pb-5 lg:text-left lg:opacity-0 lg:shadow-card lg:group-hover:visible lg:group-hover:top-full lg:group-hover:opacity-100 dark:lg:border-transparent dark:lg:bg-[#15182A] lg:dark:shadow-card-dark"
+                  >
+                    <li>
+                      <a href="blog-grid.html" class="inline-flex items-center justify-center text-base text-center text-black font-heading hover:text-primary dark:text-white dark:hover:text-primary">
+                        Blog Grids
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="blog-details.html"
+                        class="inline-flex items-center justify-center text-base text-center text-black font-heading hover:text-primary dark:text-white dark:hover:text-primary"
+                      >
+                        Blog Details
+                      </a>
+                    </li>
+                    <li>
+                      <a href="404.html" class="inline-flex items-center justify-center text-base text-center text-black font-heading hover:text-primary dark:text-white dark:hover:text-primary">
+                        404 Error
+                      </a>
+                    </li>
+                    <li>
+                      <a href="signin.html" class="inline-flex items-center justify-center text-base text-center text-black font-heading hover:text-primary dark:text-white dark:hover:text-primary">
+                        Sign In
+                      </a>
+                    </li>
+                    <li>
+                      <a href="signup.html" class="inline-flex items-center justify-center text-base text-center text-black font-heading hover:text-primary dark:text-white dark:hover:text-primary">
+                        Sign Up
+                      </a>
+                    </li>
+                  </ul>
+                </li> -->
+              </ul>
+            </nav>
+          </div>
+
+          <!-- <div class="mr-[60px] flex items-center justify-end lg:mr-0"> -->
+            <!-- <label for="themeSwitcher" class="inline-flex items-center cursor-pointer" aria-label="themeSwitcher" name="themeSwitcher">
+              <input type="checkbox" name="themeSwitcher" id="themeSwitcher" class="sr-only" />
+              <span class="hidden dark:block">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_420_119)">
+                    <path
+                      d="M8.40276 5.88205C8.40259 7.05058 8.75048 8.19267 9.40204 9.16268C10.0536 10.1327 10.9793 10.8866 12.0611 11.3284C13.143 11.7701 14.3318 11.8796 15.4761 11.6429C16.6204 11.4062 17.6683 10.8341 18.4861 9.99941V10.0834C18.4861 14.7243 14.7242 18.4862 10.0833 18.4862C5.44247 18.4862 1.68054 14.7243 1.68054 10.0834C1.68054 5.44259 5.44247 1.68066 10.0833 1.68066H10.1673C9.60775 2.22779 9.16333 2.88139 8.86028 3.60295C8.55722 4.32451 8.40166 5.09943 8.40276 5.88205V5.88205ZM3.3611 10.0834C3.36049 11.5833 3.86151 13.0403 4.78444 14.2226C5.70737 15.4049 6.99919 16.2446 8.45437 16.608C9.90954 16.9715 11.4445 16.8379 12.8149 16.2284C14.1854 15.6189 15.3127 14.5686 16.0174 13.2446C14.7632 13.54 13.4543 13.5102 12.215 13.1578C10.9756 12.8054 9.84679 12.1422 8.93568 11.2311C8.02457 10.32 7.36136 9.19119 7.00898 7.95181C6.6566 6.71243 6.62672 5.40357 6.92219 4.1494C5.84629 4.72259 4.94652 5.57759 4.31923 6.62288C3.69194 7.66817 3.36074 8.86438 3.3611 10.0834V10.0834Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_420_119">
+                      <rect width="20.1667" height="20.1667" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <span class="block dark:hidden">
+                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1_11114)">
+                    <path
+                      d="M11.5658 16.4998C10.1071 16.4998 8.70815 15.9204 7.6767 14.8889C6.64525 13.8575 6.06579 12.4585 6.06579 10.9998C6.06579 9.54115 6.64525 8.1422 7.6767 7.11075C8.70815 6.0793 10.1071 5.49984 11.5658 5.49984C13.0245 5.49984 14.4234 6.0793 15.4549 7.11075C16.4863 8.1422 17.0658 9.54115 17.0658 10.9998C17.0658 12.4585 16.4863 13.8575 15.4549 14.8889C14.4234 15.9204 13.0245 16.4998 11.5658 16.4998ZM11.5658 14.6665C12.5382 14.6665 13.4709 14.2802 14.1585 13.5926C14.8461 12.9049 15.2325 11.9723 15.2325 10.9998C15.2325 10.0274 14.8461 9.09475 14.1585 8.40711C13.4709 7.71948 12.5382 7.33317 11.5658 7.33317C10.5933 7.33317 9.6607 7.71948 8.97306 8.40711C8.28543 9.09475 7.89912 10.0274 7.89912 10.9998C7.89912 11.9723 8.28543 12.9049 8.97306 13.5926C9.6607 14.2802 10.5933 14.6665 11.5658 14.6665ZM10.6491 0.916504H12.4825V3.6665H10.6491V0.916504ZM10.6491 18.3332H12.4825V21.0832H10.6491V18.3332ZM3.78787 4.51809L5.08404 3.22192L7.02829 5.16617L5.73212 6.46234L3.78787 4.519V4.51809ZM16.1033 16.8335L17.3995 15.5373L19.3437 17.4816L18.0475 18.7778L16.1033 16.8335ZM18.0475 3.221L19.3437 4.51809L17.3995 6.46234L16.1033 5.16617L18.0475 3.22192V3.221ZM5.73212 15.5373L7.02829 16.8335L5.08404 18.7778L3.78787 17.4816L5.73212 15.5373ZM21.6491 10.0832V11.9165H18.8991V10.0832H21.6491ZM4.23245 10.0832V11.9165H1.48245V10.0832H4.23245Z"
+                      fill="#181C31"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_11114">
+                      <rect width="22" height="22" fill="white" transform="translate(0.565796)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+            </label>
+            <a href="signin.html" class="hidden py-[10px] px-6 text-base font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary sm:inline-block"> Sign In </a>
+
+            <a href="signup.html" class="hidden rounded-md bg-primary py-[10px] px-[30px] text-base font-medium text-white hover:bg-primary/90 sm:inline-block"> Sign Up </a> -->
+          <!-- </div> -->
+        </div>
+      </div>
+    </header>
+    <!-- ======= Header End ======= -->
+
+    <!-- ======= Main Start ======= -->
+    <main>
+      <section class="pt-[150px] pb-[60px] lg:pt-[220px]">
+        <div class="container overflow-hidden lg:max-w-[1250px]">
+          
+          <div class="flex flex-wrap -mx-4 justify-center">
+            <div class="w-full px-4">
+              <div class="mx-auto mb-[60px] max-w-[510px] text-center wow fadeInUp" data-wow-delay=".1s">
+                <span class="block mb-2 text-lg font-semibold text-primary">
+                  Przegląd dokumentów
+                </span>
+                <h2 class="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[40px]">
+                  Mapa pomocy sąsiedzkiej
+                </h2>
+                <p class="text-base text-body-color dark:text-[#A0A0A0]">
+                  Poniżej znajdują się podglądy dokumentów. Możesz je przeglądać bezpośrednio na stronie lub pobrać na dysk.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col space-y-20">
+            
+            <div class="w-full wow fadeInUp" data-wow-delay=".2s">
+              <div class="flex flex-col md:flex-row justify-between items-end mb-4 border-b pb-2 dark:border-gray-700">
+                <div>
+                  <h3 class="text-2xl font-bold text-black dark:text-white">
+                    1. Mapa - Grabówka i Okolice
+                  </h3>
+                  <!-- <p class="text-sm text-body-color mt-1">Pełna treść statutu</p> -->
+                </div>
+                <a href="images/blog-02/A3 GRABÓWKA I OKOLICE.pdf" target="_blank" class="mt-2 md:mt-0 text-primary font-medium hover:underline flex items-center">
+                  <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                  Pobierz ten plik
+                </a>
+              </div>
+              
+              <div class="w-full h-[600px] bg-gray-100 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 dark:bg-gray-800">
+                <iframe 
+                  src="images/blog-02/A3 GRABÓWKA I OKOLICE.pdf" 
+                  class="w-full h-full" 
+                  title="1. Mapa - Grabówka i Okolice"
+                >
+                  <p class="p-10 text-center">Twoja przeglądarka nie obsługuje podglądu PDF. <a href="documents/statut.pdf" class="text-primary underline">Kliknij tutaj, aby pobrać plik.</a></p>
+                </iframe>
+              </div>
+            </div>
+
+            <div class="w-full wow fadeInUp" data-wow-delay=".3s">
+              <div class="flex flex-col md:flex-row justify-between items-end mb-4 border-b pb-2 dark:border-gray-700">
+                 <div>
+                  <h3 class="text-2xl font-bold text-black dark:text-white">
+                    2. Mapa - Sowlany i Okolice
+                  </h3>
+                  <!-- <p class="text-sm text-body-color mt-1">Raport z działalności</p> -->
+                </div>
+                <a href="images/blog-02/A3 SOWLANY I OKOLICE.pdf I OKOLICE.pdf" target="_blank" class="mt-2 md:mt-0 text-primary font-medium hover:underline flex items-center">
+                  <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                  Pobierz ten plik
+                </a>
+              </div>
+              
+              <div class="w-full h-[600px] bg-gray-100 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 dark:bg-gray-800">
+                <iframe 
+                  src="images/blog-02/A3 SOWLANY I OKOLICE.pdf I OKOLICE.pdf" 
+                  class="w-full h-full" 
+                  title="2. Mapa - Sowlany i Okolice"
+                >
+                  <p class="p-10 text-center">Twoja przeglądarka nie obsługuje podglądu PDF. <a href="documents/sprawozdanie-2024.pdf" class="text-primary underline">Kliknij tutaj, aby pobrać plik.</a></p>
+                </iframe>
+              </div>
+            </div>
+
+            <div class="w-full wow fadeInUp" data-wow-delay=".4s">
+              <div class="flex flex-col md:flex-row justify-between items-end mb-4 border-b pb-2 dark:border-gray-700">
+                 <div>
+                  <h3 class="text-2xl font-bold text-black dark:text-white">
+                    Plakaty promujące
+                  </h3>
+                  <!-- <p class="text-sm text-body-color mt-1">Zasady uczestnictwa</p> -->
+                </div>
+                <a href="images/blog-02/Plakaty promujące MPS.pdf" target="_blank" class="mt-2 md:mt-0 text-primary font-medium hover:underline flex items-center">
+                  <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                  Pobierz ten plik
+                </a>
+              </div>
+              
+              <div class="w-full h-[600px] bg-gray-100 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 dark:bg-gray-800">
+                <iframe 
+                  src="images/blog-02/Plakaty promujące MPS.pdf" 
+                  class="w-full h-full" 
+                  title="Plakaty promujące"
+                >
+                  <p class="p-10 text-center">Twoja przeglądarka nie obsługuje podglądu PDF. <a href="documents/regulamin.pdf" class="text-primary underline">Kliknij tutaj, aby pobrać plik.</a></p>
+                </iframe>
+              </div>
+            </div>
+
+             <div class="w-full wow fadeInUp" data-wow-delay=".5s">
+              <div class="flex flex-col md:flex-row justify-between items-end mb-4 border-b pb-2 dark:border-gray-700">
+                 <div>
+                  <h3 class="text-2xl font-bold text-black dark:text-white">
+                    Regulamin
+                  </h3>
+                  <!-- <p class="text-sm text-body-color mt-1">Do wydruku i wypełnienia</p> -->
+                </div>
+                <a href="images/blog-02/Regulamin MPS.pdf" target="_blank" class="mt-2 md:mt-0 text-primary font-medium hover:underline flex items-center">
+                  <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                  Pobierz ten plik
+                </a>
+              </div>
+              
+              <div class="w-full h-[600px] bg-gray-100 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 dark:bg-gray-800">
+                <iframe 
+                  src="images/blog-02/Regulamin MPS.pdf" 
+                  class="w-full h-full" 
+                  title="Regulamin"
+                >
+                  <p class="p-10 text-center">Twoja przeglądarka nie obsługuje podglądu PDF. <a href="documents/formularz.pdf" class="text-primary underline">Kliknij tutaj, aby pobrać plik.</a></p>
+                </iframe>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      </main>
+    <!-- ======= Main End ======= -->
+
+    <!-- ======= Footer Start ======= -->
+    <footer>
+      <div class="bg-[#F8FAFB] pt-10 pb-10 dark:bg-[#15182A]">
+        <div class="container max-w-[1390px]">
+          
+          <div class="flex flex-wrap -mx-4 justify-between">
+            
+            <div class="w-full px-4 lg:w-4/12 xl:w-3/12 mb-10 lg:mb-0">
+              <div class="wow fadeInUp" data-wow-delay=".2s">
+                <a href="index.html" class="inline-block mb-6">
+                  <img src="images/logo/logo.png" alt="logo" class="block max-w-[200px] dark:hidden" />
+                  <img src="images/logo/logo-white.svg" alt="logo" class="hidden max-w-full dark:block" />
+                </a>
+                <h2 class="text-xl font-bold text-black dark:text-white mb-2">Akademia Inicjatyw Twórczych</h2>
+                <p class="text-base text-body opacity-80">Forma prawna: Fundacja</p>
+              </div>
+            </div>
+
+            <div class="w-full px-4 lg:w-8/12 xl:w-8/12">
+              <div class="wow fadeInUp grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-10" data-wow-delay=".3s">
+                
+                <div>
+                  <h3 class="mb-4 text-lg font-semibold text-black dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2">
+                    Dane Rejestrowe
+                  </h3>
+                  <ul class="space-y-2">
+                    <li class="flex flex-col sm:flex-row text-base text-body">
+                      <span class="font-medium min-w-[80px] text-black dark:text-white opacity-70">KRS:</span>
+                      <span>0001055058</span>
+                    </li>
+                    <li class="flex flex-col sm:flex-row text-base text-body">
+                      <span class="font-medium min-w-[80px] text-black dark:text-white opacity-70">NIP:</span>
+                      <span>9662181614</span>
+                    </li>
+                    <li class="flex flex-col sm:flex-row text-base text-body">
+                      <span class="font-medium min-w-[80px] text-black dark:text-white opacity-70">REGON:</span>
+                      <span>526234280</span>
+                    </li>
+                    <li class="flex flex-col sm:flex-row text-base text-body">
+                      <span class="font-medium min-w-[80px] text-black dark:text-white opacity-70">Data:</span>
+                      <span>30 sierpnia 2023 r.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="mb-4 text-lg font-semibold text-black dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2">
+                    Kontakt & Zarząd
+                  </h3>
+                  <ul class="space-y-2">
+                    <li class="text-base text-body">
+                      <span class="block font-medium text-black dark:text-white opacity-70 mb-1">Główna siedziba:</span>
+                      ul. Malinowa 6/6, 15-523 Grabówka
+                    </li>
+                    <li class="text-base text-body pt-2">
+                      <span class="block font-medium text-black dark:text-white opacity-70 mb-1">Prezes Zarządu:</span>
+                      Piotr Sędziak
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wow fadeInUp bg-primary py-7 dark:bg-black" data-wow-delay=".2s">
+        <div class="container max-w-[1390px]">
+          <div class="flex flex-wrap -mx-3 items-center">
+            
+            <div class="w-full px-3 md:w-1/2 lg:w-2/3">
+              <p class="text-base text-center text-white md:text-left">&copy; 2026 Akademia Inicjatyw Twórczych.</p>
+              <p class="text-base text-center text-white md:text-left">Wszelkie prawa zastrzeżone.</p>
+            </div>
+
+            <div class="w-full px-3 md:w-1/2 lg:w-1/3">
+              <div class="flex items-center justify-center mt-4 md:mt-0 md:justify-end space-x-5">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/akademia.inicjatyw" class="text-white opacity-70 hover:opacity-100" aria-label="facebook">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_53_163)"><path d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z" fill="white" /></g><defs><clipPath id="clip0_53_163"><rect width="24" height="24" fill="white" /></clipPath></defs></svg>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="https://pl.linkedin.com/company/akademia-inicjatyw" class="text-white opacity-70 hover:opacity-100" aria-label="linkedin">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_53_169)"><path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46943 6.99929 4.939 6.99902C4.40857 6.99876 3.89996 6.78779 3.52508 6.41253C3.15019 6.03727 2.93973 5.52846 2.94 4.99802C2.94027 4.46759 3.15123 3.95899 3.52649 3.5841C3.90175 3.20922 4.41057 2.99876 4.941 2.99902C5.47143 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="white" /></g><defs><clipPath id="clip0_53_169"><rect width="24" height="24" fill="white" /></clipPath></defs></svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ======= Footer End ======= -->
+  </body>
+</html>
