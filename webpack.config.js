@@ -88,6 +88,6 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
     clean: true,
-    assetModuleFilename: 'images/[name][ext]',
+    assetModuleFilename: '[path][name][ext]', 
   },
 };
