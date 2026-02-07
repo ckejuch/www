@@ -2,6 +2,7 @@ const path = require('path');
 const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require("copy-webpack-plugin"); // 1. Import it
 
 const INCLUDE_PATTERN = /<include src="(.+)"\s*\/?>(?:<\/include>)?/gi;
 const processNestedHtml = (content, loaderContext, dir = null) =>
@@ -83,6 +84,15 @@ module.exports = {
       filename: 'style.css',
       chunkFilename: 'style.css',
     }),
+    new CopyPlugin({
+      patterns: [
+        { 
+          from: "src/images", 
+          to: "images",
+          noErrorOnMissing: true 
+        },
+      ],
+    }),
   ],
   output: {
     filename: 'bundle.js',
@@ -98,3 +108,4 @@ module.exports = {
     },
   },
 };
+
