@@ -88,6 +88,13 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
     clean: true,
-    assetModuleFilename: '[path][name][ext]', 
+    assetModuleFilename: (pathData) => {
+      const filepath = path
+        .dirname(pathData.filename)
+        .split("/")
+        .slice(1)
+        .join("/");
+      return `${filepath}/[name][ext]`;
+    },
   },
 };
