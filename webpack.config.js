@@ -2,7 +2,9 @@ const path = require('path');
 const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyPlugin = require("copy-webpack-plugin"); // 1. Import it
+const CopyPlugin = require("copy-webpack-plugin");
+const SitemapPlugin = require('sitemap-webpack-plugin').default;
+
 
 const INCLUDE_PATTERN = /<include src="(.+)"\s*\/?>(?:<\/include>)?/gi;
 const processNestedHtml = (content, loaderContext, dir = null) =>
@@ -18,8 +20,21 @@ const processNestedHtml = (content, loaderContext, dir = null) =>
         );
       });
 
+
+      
 // HTML generation
-const paths = [];
+const paths = [
+  { path: '/', priority: 1.0 },
+  { path: '/projects.html', priority: 0.8 },
+  { path: '/news.html', priority: 0.8 },
+  { path: '/blog-01.html', priority: 0.64 },
+  { path: '/blog-02.html', priority: 0.64 },
+  { path: '/news-01.html', priority: 0.64 },
+  { path: '/news-02.html', priority: 0.64 },
+  { path: '/news-03.html', priority: 0.64 },
+  { path: '/news-04.html', priority: 0.64 },
+];
+
 const generateHTMLPlugins = () => glob.sync('./src/*.html').map((dir) => {
   const filename = path.basename(dir);
 
@@ -91,8 +106,21 @@ module.exports = {
           to: "images",
           noErrorOnMissing: true 
         },
+        { 
+          from: "src/robots.txt",
+          to: "robots.txt"
+        },
       ],
     }),
+    new SitemapPlugin({
+      base: 'https://akademiainicjatyw.pl',
+      paths,
+      options: {
+        filename: 'sitemap.xml',
+        lastmod: true,
+        changefreq: 'monthly'
+      }
+    })
   ],
   output: {
     filename: 'bundle.js',
