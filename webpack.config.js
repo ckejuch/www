@@ -30,7 +30,7 @@ const generateHTMLPlugins = () => glob.sync('./src/*.html').map((dir) => {
   return new HtmlWebpackPlugin({
     filename,
     template: `./src/${filename}`,
-    favicon: `./src/images/favicon.ico`,
+    favicon: `./src/images/logo/ait_logo_weboffice_C_1.jpg`,
     inject: 'body',
   });
 });
